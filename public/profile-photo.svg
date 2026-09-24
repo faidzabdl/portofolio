@@ -1,0 +1,31 @@
+<svg viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder profile photo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12151d" />
+      <stop offset="55%" stop-color="#1b2028" />
+      <stop offset="100%" stop-color="#2a2114" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a33d" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#e8a33d" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e8eaef" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="480" height="600" fill="url(#bg)" />
+  <rect width="480" height="600" fill="url(#grid)" />
+  <circle cx="240" cy="220" r="220" fill="url(#glow)" />
+
+  <text x="240" y="290" text-anchor="middle" font-family="'Space Grotesk', Arial, sans-serif"
+        font-size="150" font-weight="700" fill="#e8a33d" fill-opacity="0.9">FA</text>
+
+  <g font-family="'JetBrains Mono', monospace" fill="#e8eaef" fill-opacity="0.55">
+    <text x="240" y="520" text-anchor="middle" font-size="14" letter-spacing="0.5">placeholder photo</text>
+    <text x="240" y="544" text-anchor="middle" font-size="12" fill-opacity="0.4">replace src/data/profile.js "photo"</text>
+  </g>
+
+  <rect x="16" y="16" width="448" height="568" rx="18" fill="none" stroke="#e8eaef" stroke-opacity="0.12"
+        stroke-width="1.5" stroke-dasharray="2 6" />
+</svg>

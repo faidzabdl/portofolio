@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faidz Abdul Mazid | Informatics Engineering Student</title>
+    <meta
+      name="description"
+      content="Personal developer portfolio of Faidz Abdul Mazid, an Informatics Engineering student interested in web, Android, and game development."
+    />
+    <meta name="theme-color" content="#0a0c11" />
+
+    <link id="favicon-svg" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
+    <link id="favicon-png" rel="icon" type="image/png" sizes="32x32" href="/favicon-dark.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      // Applied before React mounts so there's no flash of the wrong theme
+      // (and no flash of the wrong favicon either).
+      // Priority: saved choice -> OS preference -> dark (this site's default).
+      (function () {
+        try {
+          var stored = localStorage.getItem('faidz-theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+
+          document.getElementById('favicon-svg').href = '/favicon-' + theme + '.svg';
+          document.getElementById('favicon-png').href = '/favicon-' + theme + '.png';
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
