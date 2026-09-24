@@ -10,7 +10,7 @@ export default function About() {
 
       <div className="about-layout">
         <div className="about-photo-col">
-          <PhotoCard src={profile.photo} alt={`Photo of ${profile.name}`} />
+          <PhotoCard src={profile.photo} alt="faidz.jpg" />
         </div>
 
         <div className="about-main-col">
